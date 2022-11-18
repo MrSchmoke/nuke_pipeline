@@ -1,3 +1,4 @@
 # vfx_pipeline
 
-Setting up virtual environments and setting up mongodb.
+## 1.MongoDB NoSQL
+Learning about managing data with PyMongo
