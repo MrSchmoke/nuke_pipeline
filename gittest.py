@@ -15,10 +15,9 @@ else:
 #update cloned main files
 
 cloned_repo = Repo.init(cloned_path)
-if not cloned_repo.iter_commits("main..main{u}"):
-    o = cloned_repo.remotes.origin
-    o.pull()
-    print("Cloned main updated")
+o = cloned_repo.remotes.origin
+o.pull()
+print("Cloned main updated")
 
 #check if files are unchanged, if true, then pull new updates from main --> wrong way need another statement
 # if(cloned_repo.is_dirty()):
