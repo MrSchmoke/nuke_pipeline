@@ -22,7 +22,7 @@ With the help of Houdini Expression Editor nodes can be created during a session
 
 #### make import hou work
 Add this to the settings.json file:
-'''
+```
 "python.autoComplete.extraPaths": [
     "C:\\Program Files\\Side Effects Software\\Houdini 19.5.303\\python39\\libs"
 ],
@@ -31,11 +31,11 @@ Add this to the settings.json file:
     "PYTHONPATH": "C:\\Program Files\\Side Effects Software\\Houdini 19.5.303\\python39\\libs",
     "PATH": "${env:PATH};C:\\Program Files\\Side Effects Software\\Houdini 19.5.303\\bin"
 },
-'''
+```
 and set the python interpreter to this path:
-'''
+```
 "C:\Program Files\Side Effects Software\Houdini 19.5.303\bin\hython3.9.exe"
-'''
+```
 
 ## 3. diary
 221120/n Setup with nuke and houdini on my main computer (nuke setup on mac) and learning now how to manage github for versioning with GitPython
