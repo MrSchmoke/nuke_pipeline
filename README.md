@@ -2,8 +2,10 @@
 
 ## Main goals
 Get to know pipeline development on my home setup
+
 ### 1. MongoDB NoSQL
 Learning about managing data with PyMongo
+
 ### 2. Make use of apis (nuke, houdini)
 - NukeAPI works on pc and mac (serves as artist workstation)
 - HoudiniFX works kind of (needs more work)
@@ -11,6 +13,7 @@ Learning about managing data with PyMongo
 ## 2. Setup Instructions
 ### Nuke
 - Will be updated
+
 ### Houdini 19.5
 With the help of Houdini Expression Editor nodes can be created during a session and presaved on .py files
 
@@ -35,12 +38,12 @@ Add this to the settings.json file:
 and set the python interpreter to this path:
 ```
 "C:\Program Files\Side Effects Software\Houdini 19.5.303\bin\hython3.9.exe"
-```
+'''
 
-## 3. diary
-221120/n Setup with nuke and houdini on my main computer (nuke setup on mac) and learning now how to manage github for versioning with GitPython
+## 3. Diary
+**221120** Setup with nuke and houdini on my main computer (nuke setup on mac) and learning now how to manage github for versioning with GitPython
 
-## 4. to do
+## 4. To do
 - restructure file structure
 - pyside6
 - using oop with python, restructure
