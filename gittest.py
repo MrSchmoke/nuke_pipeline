@@ -13,9 +13,16 @@ else:
     print("Clone already exists.")
 
 #update cloned main files
+
 cloned_repo = Repo.init(cloned_path)
-o = cloned_repo.remotes.origin
-o.pull()
+
+#check if files are unchanged, if true, then pull new updates from main
+if(cloned_repo.is_dirty()):
+    o = cloned_repo.remotes.origin
+    o.pull()
+    print("Cloned main updated")
+else:
+    print("Cloned main remains unchanged")
 
 #show branches
 # heads = repo.heads
