@@ -1,1 +1,3 @@
 **/.mongo/
+.gitvenv/**
+__pycache__
