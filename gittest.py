@@ -16,13 +16,17 @@ else:
 
 cloned_repo = Repo.init(cloned_path)
 
-#check if files are unchanged, if true, then pull new updates from main
-if(cloned_repo.is_dirty()):
-    o = cloned_repo.remotes.origin
-    o.pull()
-    print("Cloned main updated")
-else:
-    print("Cloned main remains unchanged")
+o = cloned_repo.remotes.origin
+o.pull()
+print("Cloned main updated")
+
+#check if files are unchanged, if true, then pull new updates from main --> wrong way need another statement
+# if(cloned_repo.is_dirty()):
+#     o = cloned_repo.remotes.origin
+#     o.pull()
+#     print("Cloned main updated")
+# else:
+#     print("Cloned main remains unchanged")
 
 #show branches
 # heads = repo.heads
