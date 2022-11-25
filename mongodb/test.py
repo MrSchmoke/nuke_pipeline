@@ -1,9 +1,49 @@
 import random
 import time
 from mongoengine import *
+import pymongo
+import urllib.parse
+# from paramiko import SSHClient
+from sshtunnel import SSHTunnelForwarder
+import pprint
 
-connect("vfx")
+server = SSHTunnelForwarder("192.168.1.19", 
+                            ssh_username="server",
+                            ssh_password="1",
+                            remote_bind_address=("127.0.0.1", 27017))
 
+server.start()
+print("SSH connection to virtual machine succeeded.")
+# ssh_client = SSHClient()
+# ssh_client.load_system_host_keys()
+# ssh_client.connect("192.168.1.19", username="server", port=22, password="1")
+# ssh_client.exec_command('')
+
+
+user = urllib.parse.quote_plus("server")
+password = urllib.parse.quote_plus("1")
+# password = 1
+# client = pymongo.MongoClient(host="192.168.1.19")
+client = pymongo.MongoClient("127.0.0.1", server.local_bind_port)
+
+db = client["vfx"]
+# pprint.pprint(db.list_collection_names())
+collection = db["cct"]
+
+doc = collection.find_one({"name": "nuke"})
+print(doc)
+
+
+# print(db.get_collection("cct").)
+
+#collection = db["cct"]
+#doc = collection.find_one({"name": "nuke"})
+server.stop()
+print("SSH connection closed.")
+# ssh_client.close()
+
+
+#connect("vfx")
 ##FIRST TEST
 
 # def validate_description(value):
