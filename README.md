@@ -1,6 +1,6 @@
 # vfx_pipeline
 
-## Main goals
+## 1. Main goals
 Get to know pipeline development on my home setup
 
 ### 1. MongoDB NoSQL
@@ -45,10 +45,11 @@ and set the python interpreter to this path:
 
 ## 3. Diary
 **221120** Setup with nuke and houdini on my main computer (nuke setup on mac) and learning now how to manage github for versioning with GitPython
+**221125** Successful connection to my virtual machine and the mongodb server inside
 
 ## 4. To do
 - restructure file structure
 - pyside6
 - using oop with python, restructure
 - houdini: find good way to setup stuff
-- mongodb setup db and crud functionality
+- mongodb: crud functionality
